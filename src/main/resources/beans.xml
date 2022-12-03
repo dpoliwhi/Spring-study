@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    <bean id="messageProviderSimple" class="org.example.MessageProviderSimple"/>-->
+<!--    <bean id="messageProviderDefault" class="org.example.MessageProviderDefault"/>-->
+    <bean id="argsMessageProvider" class="org.example.MessageProviderArgs">
+        <constructor-arg name="args">
+            <list>
+                <value>Hello22</value>
+                <value>Aloha22</value>
+                <value>Boungorno22</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+<!--    <bean id="messageRendererConsole" class="org.example.MessageRenderConsole"/>-->
+<!--    <bean id="messageRendererXML" class="org.example.MessageRenderXML"/>-->
+    <bean id="messageRendererFile" class="org.example.MessageRenderFile"/>
+</beans>
