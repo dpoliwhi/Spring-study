@@ -9,7 +9,7 @@ public class MessageProviderArgs implements MessageProvider{
         if (args.length < 1) {
             throw new IllegalArgumentException("Can't find any arguments");
         }
-        Arrays.stream(args).forEach(System.out::println);
+//        Arrays.stream(args).forEach(System.out::println);
 
         message = args[1];
     }

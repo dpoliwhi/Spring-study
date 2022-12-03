@@ -8,7 +8,6 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:beans.xml");
         MessageProvider provider = context.getBean(MessageProvider.class);
         MessageRenderer renderer = context.getBean(MessageRenderer.class);
-        renderer.setMessageProvider(provider);
         renderer.render();
     }
 }
