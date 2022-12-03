@@ -1,9 +1,13 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+//@Component
 public class MessageRenderXML implements MessageRenderer{
     MessageProvider messageProvider;
     @Override
@@ -16,6 +20,7 @@ public class MessageRenderXML implements MessageRenderer{
     }
 
     @Override
+    @Autowired
     public void setMessageProvider(MessageProvider mp) {
         this.messageProvider = mp;
     }
